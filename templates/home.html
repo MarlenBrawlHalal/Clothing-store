@@ -1,12 +1,17 @@
 {% extends '_base.html' %}
+{% load static %}
 
 {% block content %}
-    <h1>Home page</h1>
-    {% if user.is_authenticated %}
-        <h1> Hello {{ user.username }}</h1>
-        <p><a href="{% url 'logout' %}">Logout</a></p>
-    {% else %}
-        <h3> You have not logged in </h3>
-        <p> Please <a href="{% url 'login' %}">login</a> or <a href="{% url 'signup' %}">signup</a></p>
-    {% endif %}
+    <div class="container">
+        <h1 class="text-center">Home page</h1>
+        <div>
+            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
+            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
+            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
+            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
+            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
+            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
+            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
+        </div>
+    </div>
 {% endblock content%}
