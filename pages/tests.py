@@ -22,6 +22,5 @@ class HomePageTests(SimpleTestCase):
 
     def test_homepage_resolves_homepageview(self):
         view = resolve('/')
-        print('My view name is', view.func.__name__)
         self.assertEqual(view.func.__name__, HomePageView.as_view().__name__)
         
