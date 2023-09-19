@@ -2,16 +2,10 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <h1 class="text-center">Home page</h1>
-        <div>
-            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
-            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
-            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
-            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
-            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
-            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
-            <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
-        </div>
+    <h1 class="text-center">Home page</h1>
+    <div>
+        <img src="{% static 'images/clothes/jeans.png' %}" alt="" class="jeans">
+        <p>price: 123$</p>
+        <button>Buy</button>
     </div>
 {% endblock content%}
