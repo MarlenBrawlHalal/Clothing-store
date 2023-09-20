@@ -9,6 +9,7 @@
     <h1>Log in</h1>
     <form method="post">{% csrf_token %}
         {{ form|crispy }}
+        <p>Forgot your password? <a href="{% url 'account_reset_password' %}">Reset password</a></p>
         <button type="submit" class="btn btn-outline-success">Login</button>
     </form>
 {% endblock content%}
