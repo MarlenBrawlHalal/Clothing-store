@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block title %}Clothes{% endblock title %}
+
+{% block content %}
+    <h1 class="text-center">Available clothes</h1>
+    {% for clothes in clothes_list %}
+        <div>
+            <img src="{{ clothes.image.url }}" alt="{{ clothes.title }}" class="jeans">
+            <p>Title: {{ clothes.title }}</p>
+            <p>Price: {{ clothes.price }}</p>
+            <button class="btn btn-outline-success">Buy</button>
+        </div>
+    {% endfor %}
+{% endblock content %}
