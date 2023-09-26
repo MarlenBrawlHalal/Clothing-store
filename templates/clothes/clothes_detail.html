@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block title %}Clothes{% endblock title %}
+
+{% block content %}
+    <div class="d-flex justify-content-center">
+        <div class="align-self-center">
+            <img src="{{ clothes.image.url }}" alt="{{ clothes.title }}">
+            <p>Title: {{ clothes.title }}</p>
+            <p>Description: {{ clothes.description }}</p>
+            <p>Price: {{ clothes.price }}</p>
+            <button class="btn btn-outline-success">Buy</button>
+        </div>
+    </div>
+{% endblock content%}

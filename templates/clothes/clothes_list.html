@@ -4,12 +4,14 @@
 
 {% block content %}
     <h1 class="text-center">Available clothes</h1>
-    {% for clothes in clothes_list %}
-        <div>
-            <img src="{{ clothes.image.url }}" alt="{{ clothes.title }}" class="jeans">
-            <p>Title: {{ clothes.title }}</p>
-            <p>Price: {{ clothes.price }}</p>
-            <button class="btn btn-outline-success">Buy</button>
-        </div>
-    {% endfor %}
+    <div class="d-flex flex-wrap justify-content-around align-content-between">
+        {% for clothes in clothes_list %}
+            <div>
+                <a href="{% url 'clothes_detail' clothes.pk %}"><img src="{{ clothes.image.url }}" alt="{{ clothes.title }}" class="jeans"></a>
+                <p>Title: {{ clothes.title }}</p>
+                <p>Price: {{ clothes.price }}</p>
+                    <button class="btn btn-outline-success">Buy</button>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}
