@@ -1,4 +1,12 @@
 from django.contrib import admin
-from .models import Clothes
+from .models import Clothes, Review
 
-admin.site.register(Clothes)
+class ReviewInline(admin.TabularInline):
+    model = Review
+
+class ClothesAdmin(admin.ModelAdmin):
+    inlines = [
+        ReviewInline,
+    ]
+
+admin.site.register(Clothes, ClothesAdmin)

@@ -7,7 +7,7 @@
     <div class="d-flex flex-wrap justify-content-around align-content-between">
         {% for clothes in clothes_list %}
             <div>
-                <a href="{% url 'clothes_detail' clothes.pk %}"><img src="{{ clothes.image.url }}" alt="{{ clothes.title }}" class="jeans"></a>
+                <a href="{{ clothes.get_absolute_url }}"><img src="{{ clothes.image.url }}" alt="{{ clothes.title }}" class="jeans"></a>
                 <p>Title: {{ clothes.title }}</p>
                 <p>Price: {{ clothes.price }}</p>
                     <button class="btn btn-outline-success">Buy</button>

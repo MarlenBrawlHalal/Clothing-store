@@ -12,4 +12,8 @@
             <button class="btn btn-outline-success">Buy</button>
         </div>
     </div>
+    <h3>Comments</h3>
+    {% for review in clothes.reviews.all %}
+        <p>{{ review.author }}: {{ review.review }}</p>
+    {% endfor %}
 {% endblock content%}
