@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block title %}Search Results{% endblock title%}
+
+{% block content %}
+    <div class="d-flex flex-wrap justify-content-around align-content-between">
+        {% for clothes in clothes_list %}
+            <div>
+                <a href="{{ clothes.get_absolute_url }}"><img src="{{ clothes.image.url }}" alt="{{ clothes.title }}" class="jeans"></a>
+                <p>Title: {{ clothes.title }}</p>
+                <p>Price: {{ clothes.price }}</p>
+                    <button class="btn btn-outline-success">Buy</button>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
