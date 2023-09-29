@@ -1,6 +1,5 @@
 from typing import Any
 from django.db.models import Q
-from django.db.models.query import QuerySet
 from django.views.generic import ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
